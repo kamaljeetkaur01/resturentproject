@@ -1,0 +1,10 @@
+<?php
+if(!isset($_SESSION['userid']))
+{
+	header("Location:../login.php");
+}
+if(!isset($_SESSION['usertype'])||strToLower($_SESSION['usertype'])!="admin")
+{
+	header("Location:../login.php");
+}
+?>
